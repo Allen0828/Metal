@@ -66,3 +66,17 @@ fastlane/test_output
 # https://github.com/johnno1962/injectionforxcode
 
 iOSInjectionProject/
+
+
+
+
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+!*.xcodeproj/xcshareddat
+!*/xcuserdata/admin.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlista/
+!*.xcworkspace/contents.xcworkspacedata
+/*.gcno
+
+*.xcuserstate
+xcschememanagement.plist
+
