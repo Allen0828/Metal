@@ -10,16 +10,21 @@
 
 #include <simd/simd.h>
 
-typedef enum AAPLVertexInputIndex {
-    AAPLVertexInputIndexVertices     = 0,
-    AAPLVertexInputIndexViewportSize = 1,
-} AAPLVertexInputIndex;
+typedef enum VertexInputIndex {
+    VertexInputIndexVertices     = 0,
+    VertexInputIndexViewportSize = 1,
+} VertexInputIndex;
 
 typedef struct {
     vector_float2 position;
     vector_float4 color;
-} AAPLVertex;
+} Vertex;
 
+
+typedef struct {
+    vector_float4 position;
+    vector_float2 textureCoordinate;
+} HobenVertex;
 
 
 

@@ -25,6 +25,18 @@
 		2617595D28685A1700BE9B8C /* TriangleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2617595C28685A1700BE9B8C /* TriangleController.m */; };
 		2617596128685F0100BE9B8C /* SquareController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2617596028685F0100BE9B8C /* SquareController.m */; };
 		2617596428685F5700BE9B8C /* SquareRender.m in Sources */ = {isa = PBXBuildFile; fileRef = 2617596328685F5700BE9B8C /* SquareRender.m */; };
+		2666CA32286D54F800F98D9A /* BasicRender.m in Sources */ = {isa = PBXBuildFile; fileRef = 2666CA31286D54F800F98D9A /* BasicRender.m */; };
+		2666CA35286D55B800F98D9A /* BasicController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2666CA34286D55B800F98D9A /* BasicController.m */; };
+		2666CA39286D781D00F98D9A /* LineController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2666CA38286D781D00F98D9A /* LineController.m */; };
+		2666CA3C286D784B00F98D9A /* LineRender.m in Sources */ = {isa = PBXBuildFile; fileRef = 2666CA3B286D784B00F98D9A /* LineRender.m */; };
+		2666CA3E286D80A700F98D9A /* Square.metal in Sources */ = {isa = PBXBuildFile; fileRef = 2666CA3D286D80A700F98D9A /* Square.metal */; };
+		2666CA42286DA02500F98D9A /* ImageRender.m in Sources */ = {isa = PBXBuildFile; fileRef = 2666CA41286DA02500F98D9A /* ImageRender.m */; };
+		2666CA45286DA03400F98D9A /* ImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2666CA44286DA03400F98D9A /* ImageController.m */; };
+		2666CA47286DA51E00F98D9A /* Image.metal in Sources */ = {isa = PBXBuildFile; fileRef = 2666CA46286DA51E00F98D9A /* Image.metal */; };
+		2666CA4B286DA7A100F98D9A /* IPhoneImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2666CA4A286DA7A100F98D9A /* IPhoneImageController.m */; };
+		2666CA4D286DA7D800F98D9A /* Image.metal in Sources */ = {isa = PBXBuildFile; fileRef = 2666CA4C286DA7D800F98D9A /* Image.metal */; };
+		2666CA50286DA8B700F98D9A /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2666CA4F286DA8B700F98D9A /* MetalKit.framework */; };
+		2666CA53286DBDDA00F98D9A /* IPhoneImageRander.m in Sources */ = {isa = PBXBuildFile; fileRef = 2666CA52286DBDDA00F98D9A /* IPhoneImageRander.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +72,26 @@
 		2617596028685F0100BE9B8C /* SquareController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SquareController.m; sourceTree = "<group>"; };
 		2617596228685F5700BE9B8C /* SquareRender.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SquareRender.h; sourceTree = "<group>"; };
 		2617596328685F5700BE9B8C /* SquareRender.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SquareRender.m; sourceTree = "<group>"; };
+		2666CA30286D54F800F98D9A /* BasicRender.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BasicRender.h; sourceTree = "<group>"; };
+		2666CA31286D54F800F98D9A /* BasicRender.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasicRender.m; sourceTree = "<group>"; };
+		2666CA33286D55B800F98D9A /* BasicController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BasicController.h; sourceTree = "<group>"; };
+		2666CA34286D55B800F98D9A /* BasicController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasicController.m; sourceTree = "<group>"; };
+		2666CA37286D781D00F98D9A /* LineController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LineController.h; sourceTree = "<group>"; };
+		2666CA38286D781D00F98D9A /* LineController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LineController.m; sourceTree = "<group>"; };
+		2666CA3A286D784A00F98D9A /* LineRender.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LineRender.h; sourceTree = "<group>"; };
+		2666CA3B286D784B00F98D9A /* LineRender.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LineRender.m; sourceTree = "<group>"; };
+		2666CA3D286D80A700F98D9A /* Square.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Square.metal; sourceTree = "<group>"; };
+		2666CA40286DA02500F98D9A /* ImageRender.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageRender.h; sourceTree = "<group>"; };
+		2666CA41286DA02500F98D9A /* ImageRender.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageRender.m; sourceTree = "<group>"; };
+		2666CA43286DA03400F98D9A /* ImageController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageController.h; sourceTree = "<group>"; };
+		2666CA44286DA03400F98D9A /* ImageController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageController.m; sourceTree = "<group>"; };
+		2666CA46286DA51E00F98D9A /* Image.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Image.metal; sourceTree = "<group>"; };
+		2666CA49286DA7A100F98D9A /* IPhoneImageController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IPhoneImageController.h; sourceTree = "<group>"; };
+		2666CA4A286DA7A100F98D9A /* IPhoneImageController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IPhoneImageController.m; sourceTree = "<group>"; };
+		2666CA4C286DA7D800F98D9A /* Image.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Image.metal; sourceTree = "<group>"; };
+		2666CA4F286DA8B700F98D9A /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
+		2666CA51286DBDDA00F98D9A /* IPhoneImageRander.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IPhoneImageRander.h; sourceTree = "<group>"; };
+		2666CA52286DBDDA00F98D9A /* IPhoneImageRander.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IPhoneImageRander.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +100,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				26175936286825C100BE9B8C /* Metal.framework in Frameworks */,
+				2666CA50286DA8B700F98D9A /* MetalKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +137,7 @@
 		2617591A2868255B00BE9B8C /* metal */ = {
 			isa = PBXGroup;
 			children = (
+				2666CA48286DA78000F98D9A /* Image */,
 				2617591B2868255B00BE9B8C /* AppDelegate.h */,
 				2617591C2868255B00BE9B8C /* AppDelegate.m */,
 				261759212868255B00BE9B8C /* ViewController.h */,
@@ -121,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				261759502868331B00BE9B8C /* MetalKit.framework */,
+				2666CA4F286DA8B700F98D9A /* MetalKit.framework */,
 				2617594E2868330200BE9B8C /* Metal.framework */,
 				26175935286825C100BE9B8C /* Metal.framework */,
 			);
@@ -130,8 +165,11 @@
 		2617593C2868268B00BE9B8C /* metal-mac */ = {
 			isa = PBXGroup;
 			children = (
-				2617595E28685EEA00BE9B8C /* Square */,
 				2617595A28683C5700BE9B8C /* ShaderTypes.h */,
+				2666CA3F286DA00800F98D9A /* Image */,
+				2666CA36286D780100F98D9A /* Line */,
+				2666CA2F286D54B400F98D9A /* Basic */,
+				2617595E28685EEA00BE9B8C /* Square */,
 				261759522868394F00BE9B8C /* Triangle */,
 				2617593D2868268B00BE9B8C /* AppDelegate.h */,
 				2617593E2868268B00BE9B8C /* AppDelegate.m */,
@@ -164,8 +202,55 @@
 				2617596028685F0100BE9B8C /* SquareController.m */,
 				2617596228685F5700BE9B8C /* SquareRender.h */,
 				2617596328685F5700BE9B8C /* SquareRender.m */,
+				2666CA3D286D80A700F98D9A /* Square.metal */,
 			);
 			path = Square;
+			sourceTree = "<group>";
+		};
+		2666CA2F286D54B400F98D9A /* Basic */ = {
+			isa = PBXGroup;
+			children = (
+				2666CA30286D54F800F98D9A /* BasicRender.h */,
+				2666CA31286D54F800F98D9A /* BasicRender.m */,
+				2666CA33286D55B800F98D9A /* BasicController.h */,
+				2666CA34286D55B800F98D9A /* BasicController.m */,
+			);
+			path = Basic;
+			sourceTree = "<group>";
+		};
+		2666CA36286D780100F98D9A /* Line */ = {
+			isa = PBXGroup;
+			children = (
+				2666CA37286D781D00F98D9A /* LineController.h */,
+				2666CA38286D781D00F98D9A /* LineController.m */,
+				2666CA3A286D784A00F98D9A /* LineRender.h */,
+				2666CA3B286D784B00F98D9A /* LineRender.m */,
+			);
+			path = Line;
+			sourceTree = "<group>";
+		};
+		2666CA3F286DA00800F98D9A /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				2666CA43286DA03400F98D9A /* ImageController.h */,
+				2666CA44286DA03400F98D9A /* ImageController.m */,
+				2666CA40286DA02500F98D9A /* ImageRender.h */,
+				2666CA41286DA02500F98D9A /* ImageRender.m */,
+				2666CA46286DA51E00F98D9A /* Image.metal */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		2666CA48286DA78000F98D9A /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				2666CA49286DA7A100F98D9A /* IPhoneImageController.h */,
+				2666CA4A286DA7A100F98D9A /* IPhoneImageController.m */,
+				2666CA51286DBDDA00F98D9A /* IPhoneImageRander.h */,
+				2666CA52286DBDDA00F98D9A /* IPhoneImageRander.m */,
+				2666CA4C286DA7D800F98D9A /* Image.metal */,
+			);
+			path = Image;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,8 +353,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2666CA53286DBDDA00F98D9A /* IPhoneImageRander.m in Sources */,
+				2666CA4B286DA7A100F98D9A /* IPhoneImageController.m in Sources */,
 				261759232868255B00BE9B8C /* ViewController.m in Sources */,
 				2617591D2868255B00BE9B8C /* AppDelegate.m in Sources */,
+				2666CA4D286DA7D800F98D9A /* Image.metal in Sources */,
 				2617592E2868255D00BE9B8C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,13 +367,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				261759422868268B00BE9B8C /* ViewController.m in Sources */,
+				2666CA39286D781D00F98D9A /* LineController.m in Sources */,
+				2666CA45286DA03400F98D9A /* ImageController.m in Sources */,
 				2617596128685F0100BE9B8C /* SquareController.m in Sources */,
 				2617596428685F5700BE9B8C /* SquareRender.m in Sources */,
+				2666CA3E286D80A700F98D9A /* Square.metal in Sources */,
 				261759492868268D00BE9B8C /* main.m in Sources */,
 				2617595528683A3A00BE9B8C /* TriangleShader.metal in Sources */,
+				2666CA32286D54F800F98D9A /* BasicRender.m in Sources */,
+				2666CA35286D55B800F98D9A /* BasicController.m in Sources */,
 				2617593F2868268B00BE9B8C /* AppDelegate.m in Sources */,
 				2617595828683B0500BE9B8C /* TriangleRender.mm in Sources */,
 				2617595D28685A1700BE9B8C /* TriangleController.m in Sources */,
+				2666CA3C286D784B00F98D9A /* LineRender.m in Sources */,
+				2666CA42286DA02500F98D9A /* ImageRender.m in Sources */,
+				2666CA47286DA51E00F98D9A /* Image.metal in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +532,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WRMM4RK8LA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = metal/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -463,6 +560,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WRMM4RK8LA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = metal/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -492,6 +590,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
@@ -518,6 +617,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;

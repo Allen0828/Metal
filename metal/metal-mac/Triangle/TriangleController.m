@@ -22,13 +22,13 @@
 @implementation TriangleController
 
 - (void)loadView {
-    self.view = [[NSView alloc] initWithFrame:CGRectMake(0, 0, 400, 400)];
+    self.view = [[NSView alloc] initWithFrame:CGRectMake(0, 0, 800, 600)];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.mtkView = [[MTKView alloc]initWithFrame:CGRectMake(0, 0, 800, 600) device:MTLCreateSystemDefaultDevice()];
+    self.mtkView = [[MTKView alloc]initWithFrame:CGRectMake(0, 0, 600, 600) device:MTLCreateSystemDefaultDevice()];
 
     [self.view addSubview:self.mtkView];
 

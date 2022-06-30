@@ -6,6 +6,8 @@
 //
 
 #import "ViewController.h"
+#import "IPhoneImageController.h"  // IOS12 验证通过
+
 
 @interface ViewController ()
 
@@ -16,6 +18,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+}
+
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [self.navigationController pushViewController:[IPhoneImageController new] animated:true];
 }
 
 

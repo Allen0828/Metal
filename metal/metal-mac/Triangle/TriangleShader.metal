@@ -16,10 +16,9 @@ struct RasterizerData
     float4 color;
 };
 
-vertex RasterizerData
-vertexShader(uint vertexID [[vertex_id]],
-             constant AAPLVertex *vertices [[buffer(AAPLVertexInputIndexVertices)]],
-             constant vector_uint2 *viewportSizePointer [[buffer(AAPLVertexInputIndexViewportSize)]])
+vertex RasterizerData vertexShader(uint vertexID [[vertex_id]],
+             constant Vertex *vertices [[buffer(VertexInputIndexVertices)]],
+             constant vector_uint2 *viewportSizePointer [[buffer(VertexInputIndexViewportSize)]])
 {
     RasterizerData out;
     float2 pixelSpacePosition = vertices[vertexID].position.xy;

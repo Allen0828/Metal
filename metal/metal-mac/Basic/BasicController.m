@@ -1,24 +1,21 @@
 //
-//  SquareController.m
+//  BasicController.m
 //  metal-mac
 //
-//  Created by allen0828 on 2022/6/26.
+//  Created by allen0828 on 2022/6/30.
 //
 
-#import <MetalKit/MetalKit.h>
+#import "BasicController.h"
+#import "BasicRender.h"
 
-#import "SquareController.h"
-#import "SquareRender.h"
-
-
-
-@interface SquareController ()
+@interface BasicController ()
 
 @property (nonatomic,strong) MTKView *mtkView;
-@property (nonatomic,strong) SquareRender *render;
+@property (nonatomic,strong) BasicRender *render;
+
 @end
 
-@implementation SquareController
+@implementation BasicController
 
 - (void)loadView {
     self.view = [[NSView alloc] initWithFrame:CGRectMake(0, 0, 800, 600)];
@@ -33,11 +30,11 @@
     [self.view addSubview:self.mtkView];
     
     // 初始化视图中的所有内容时 我们可以通过设置其中的 clearColor 属性来实现背景颜色 使用MTLClearColorMake方法来设置这个颜色的RGBA通道数值。
-    self.mtkView.clearColor = MTLClearColorMake(0, 0, 0, 1);
+    self.mtkView.clearColor = MTLClearColorMake(1, 0, 0, 1);
     // 如果不需要绘制任何的动态内容 可以将视图设置为仅在视图大小改变时等重要时刻进行更新
-//    self.mtkView.enableSetNeedsDisplay = YES;
+    self.mtkView.enableSetNeedsDisplay = YES;
     
-    self.render = [[SquareRender alloc] initWithMetalView:self.mtkView];
+    self.render = [[BasicRender alloc] initWithMetalView:self.mtkView];
     [self.render mtkView:self.mtkView drawableSizeWillChange:self.mtkView.drawableSize];
     
     
@@ -51,5 +48,7 @@
      */
     
 }
+
+
 
 @end

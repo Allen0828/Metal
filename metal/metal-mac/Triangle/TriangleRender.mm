@@ -67,7 +67,7 @@ typedef struct {
 - (void)drawInMTKView:(nonnull MTKView *)view
 {
     Color color = [self makeFancyColor];
-    AAPLVertex triangleVertices[] =
+    Vertex triangleVertices[] =
     {
         // 2D positions,    RGBA colors
         { {  250,  -250 }, { color.red, color.green, color.blue, 1 } },
@@ -78,7 +78,7 @@ typedef struct {
     // Create a new command buffer for each render pass to the current drawable.
     id<MTLCommandBuffer> commandBuffer = [_commandQueue commandBuffer];
     commandBuffer.label = @"MyCommand";
-
+    
     // Obtain a renderPassDescriptor generated from the view's drawable textures.
     MTLRenderPassDescriptor *renderPassDescriptor = view.currentRenderPassDescriptor;
 
@@ -97,11 +97,11 @@ typedef struct {
         // Pass in the parameter data.
         [renderEncoder setVertexBytes:triangleVertices
                                length:sizeof(triangleVertices)
-                              atIndex:AAPLVertexInputIndexVertices];
+                              atIndex:VertexInputIndexVertices];
         
         [renderEncoder setVertexBytes:&_viewportSize
                                length:sizeof(_viewportSize)
-                              atIndex:AAPLVertexInputIndexViewportSize];
+                              atIndex:VertexInputIndexViewportSize];
 
         // Draw the triangle.
         [renderEncoder drawPrimitives:MTLPrimitiveTypeTriangle
@@ -116,9 +116,12 @@ typedef struct {
 
     // Finalize rendering here & push the command buffer to the GPU.
     [commandBuffer commit];
+    [self update];
 }
 
-
+- (void)update {
+    
+}
 
 - (Color)makeFancyColor {
 
