@@ -69,7 +69,7 @@ typedef struct
             { .pos = {1.0, -1.0, 0, 1}},
         };
         [renderEncoder setVertexBytes:vert length:sizeof(vert) atIndex:0];
-        [renderEncoder drawPrimitives:MTLPrimitiveTypeTriangle vertexStart:0 vertexCount:6 instanceCount: 2];
+        [renderEncoder drawPrimitives:MTLPrimitiveTypeTriangle vertexStart:0 vertexCount:3 instanceCount: 1];
         [renderEncoder endEncoding];
         [commandBuffer presentDrawable:mtkView.currentDrawable];
     }
