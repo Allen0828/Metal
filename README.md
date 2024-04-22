@@ -10,7 +10,7 @@
 首先通过一个基础示例来对 Metal 的创建进行初步的了解。
 </div>
 
-```swift
+```objective-c
 #import <MetalKit/MetalKit.h>
 #import <simd/simd.h>
 
@@ -32,12 +32,9 @@ typedef struct
 } TriangleVertex;
 
 @interface ViewController ()
-
 @end
 
-
 @implementation ViewController
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -75,9 +72,9 @@ typedef struct
     }
     [commandBuffer commit];
 }
-
 @end
 ```
+
 
 
  
