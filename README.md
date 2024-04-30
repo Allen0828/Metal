@@ -1,82 +1,23 @@
 # Metal Programming Guide(编程指南) 
 
 本项目旨在通过模块化工程来一步步学习 Metal 的使用方法和常用开发
+Metal简介
+Metal是苹果公司专为其设备打造的先进图形和计算API。自2014年首次亮相以来，它已经成为iOS、macOS、tvOS和watchOS上性能关键型应用的核心。通过直接与GPU沟通，Metal极大地降低了软件和硬件之间的开销，使得开发者能够挖掘出设备的最大潜力。
+
+为何选择Metal
+在Metal之前，图形API如OpenGL和DirectX统治了市场多年。尽管它们功不可没，但随着硬件的快速进步，它们的局限性变得越来越明显。Metal的出现，不仅解决了这些局限性，还提供了一种更直接、更高效的方式来控制图形处理器的强大能力。
+
+Metal的重要性
+随着移动设备和个人电脑在我们生活中的地位日益提高，对于高效能的图形和计算API的需求也随之增长。Metal不仅仅是游戏开发者的福音，它同样适用于需要大量图形处理的应用，如数据可视化、虚拟现实和增强现实等。掌握Metal，意味着你能够创造出更加丰富、更加流畅的用户体验。
+
+详细信息请查看：
+[Metal 编程指南](https://blog.csdn.net/weixin_40085372/article/details/125597848)
+
 
 ## 1 运行Metal
 <p>
 <img src="https://github.com/Allen0828/Metal/blob/main/images/metal-1.png" width="200" height="200"/>
 </p>
-<div>
-首先通过一个基础示例来对 Metal 的创建进行初步的了解。
-</div>
-
-```objective-c
-#import <MetalKit/MetalKit.h>
-#import <simd/simd.h>
-
-NSString *shader = @"\
-#include <metal_stdlib>\
-\n\
-using namespace metal;\
-vertex float4 vertexShader(uint vid [[vertex_id]], constant float4 *vertices [[buffer(0)]]) {\
-    return vertices[vid];\
-}\
-fragment float4 fragmentShader() {\
-    return float4(1,0,0,1);\
-}\
-";
-
-typedef struct
-{
-    vector_float4 pos;   // X Y Z W
-} TriangleVertex;
-
-@interface ViewController ()
-@end
-
-@implementation ViewController
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    MTKView *mtkView = [[MTKView alloc] initWithFrame:CGRectMake(0, 0, 300, 300)];
-    mtkView.device = MTLCreateSystemDefaultDevice();
-    mtkView.clearColor = MTLClearColorMake(1, 1, 1, 1);
-    [self.view addSubview:mtkView];
-
-    NSError *error;
-    id<MTLLibrary> defaultLibrary = [mtkView.device newLibraryWithSource:shader options:nil error:&error];
-    id <MTLFunction> vertexFunction = [defaultLibrary newFunctionWithName:@"vertexShader"];
-    id <MTLFunction> fragmentFunction = [defaultLibrary newFunctionWithName:@"fragmentShader"];
-    
-    MTLRenderPipelineDescriptor *pipelineStateDescriptor = [[MTLRenderPipelineDescriptor alloc] init];
-    pipelineStateDescriptor.vertexFunction = vertexFunction;
-    pipelineStateDescriptor.fragmentFunction = fragmentFunction;
-    pipelineStateDescriptor.colorAttachments[0].pixelFormat = mtkView.colorPixelFormat;
-
-    id <MTLRenderPipelineState> pipelineState = [mtkView.device newRenderPipelineStateWithDescriptor:pipelineStateDescriptor error:&error];
-
-    id<MTLCommandBuffer> commandBuffer = [[mtkView.device newCommandQueue] commandBuffer];
-    MTLRenderPassDescriptor *renderPassDescriptor = mtkView.currentRenderPassDescriptor;
-    if (renderPassDescriptor != nil) {
-        id<MTLRenderCommandEncoder> renderEncoder = [commandBuffer renderCommandEncoderWithDescriptor:renderPassDescriptor];
-        [renderEncoder setRenderPipelineState:pipelineState];
-        TriangleVertex vert[] = {
-            { .pos = {0, 1.0, 0, 1}},
-            { .pos = {-1.0, -1.0, 0, 1}},
-            { .pos = {1.0, -1.0, 0, 1}},
-        };
-        [renderEncoder setVertexBytes:vert length:sizeof(vert) atIndex:0];
-        [renderEncoder drawPrimitives:MTLPrimitiveTypeTriangle vertexStart:0 vertexCount:3 instanceCount: 1];
-        [renderEncoder endEncoding];
-        [commandBuffer presentDrawable:mtkView.currentDrawable];
-    }
-    [commandBuffer commit];
-}
-@end
-```
-
-
-
  
 ## 2 MDLMesh、帧刷新、数据传入GPU
 <p>
