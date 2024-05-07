@@ -21,10 +21,6 @@ fragment float4 fragmentShader() {\
 }\
 ";
 
-typedef struct
-{
-    vector_float4 pos;   // X Y Z W
-} TriangleVertex;
 
 @interface ViewController ()
 
@@ -58,13 +54,13 @@ typedef struct
     if (renderPassDescriptor != nil) {
         id<MTLRenderCommandEncoder> renderEncoder = [commandBuffer renderCommandEncoderWithDescriptor:renderPassDescriptor];
         [renderEncoder setRenderPipelineState:pipelineState];
-        TriangleVertex vert[] = {
-            { .pos = {0, 1.0, 0, 1}},
-            { .pos = {-1.0, -1.0, 0, 1}},
-            { .pos = {1.0, -1.0, 0, 1}},
+        static const float vertices[] = {
+               0,  1.0, 0, 1,
+            -1.0, -1.0, 0, 1,
+             1.0, -1.0, 0, 1,
         };
-        [renderEncoder setVertexBytes:vert length:sizeof(vert) atIndex:0];
-        [renderEncoder drawPrimitives:MTLPrimitiveTypeTriangle vertexStart:0 vertexCount:6 instanceCount: 2];
+        [renderEncoder setVertexBytes:vertices length:sizeof(vertices) atIndex:0];
+        [renderEncoder drawPrimitives:MTLPrimitiveTypeTriangle vertexStart:0 vertexCount:3];
         [renderEncoder endEncoding];
         [commandBuffer presentDrawable:mtkView.currentDrawable];
     }
