@@ -69,7 +69,7 @@ static id<MTLDevice> m_device;
         bool test = false;
         [renderEncoder setFragmentBytes:&test length:sizeof(bool) atIndex:0];
         id<MTLTexture> bg = [self getBackgroundTexture];
-        [renderEncoder setFragmentTexture:bg atIndex:2];
+        //[renderEncoder setFragmentTexture:bg atIndex:2];
         
         static const uint index[] = {
             0, 1, 2, 2, 3, 0

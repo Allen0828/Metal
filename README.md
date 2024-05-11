@@ -21,7 +21,10 @@ Metal的重要性
  
 ## 2 MDLMesh、帧刷新、数据传入GPU
 <p>
-<img src="https://github.com/Allen0828/Metal/blob/main/images/metal-2.png" width="200" height="200"/>
+<view><img src="https://github.com/Allen0828/Metal/blob/main/images/metal-2-1.png" width="100"></img><img
+src="https://github.com/Allen0828/Metal/blob/main/images/metal-2-2.png" width="100"></img> <img
+src="https://github.com/Allen0828/Metal/blob/main/images/metal-2-3.png" width="100"></img>
+</view>
 </p>
 
 ## 3 3D模型和坐标矩阵

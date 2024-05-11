@@ -27,7 +27,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.mtkView = [[MTKView alloc] initWithFrame:CGRectMake(0, 0, 600, 600)];
+    self.mtkView = [[MTKView alloc] initWithFrame:CGRectMake(0, 0, 300, 300)];
     self.mtkView.device = MTLCreateSystemDefaultDevice();
     self.mtkView.delegate = self;
     self.mtkView.clearColor = MTLClearColorMake(1, 1, 1, 1);
