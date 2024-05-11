@@ -12,6 +12,9 @@
 		9F14C45F2AEA4CE200161326 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F14C45E2AEA4CE200161326 /* Assets.xcassets */; };
 		9F14C4622AEA4CE200161326 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F14C4602AEA4CE200161326 /* Main.storyboard */; };
 		9F14C4642AEA4CE200161326 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F14C4632AEA4CE200161326 /* main.m */; };
+		9F43556E2BEE0266007310D8 /* Base.metal in Sources */ = {isa = PBXBuildFile; fileRef = 9F43556D2BEE0266007310D8 /* Base.metal */; };
+		9F4355722BEE0663007310D8 /* Renderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F4355712BEE0663007310D8 /* Renderer.m */; };
+		9F79DA052BEE14DF00BF4385 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F79DA042BEE14DF00BF4385 /* background.png */; };
 		9FA014732AFF6B0000D41806 /* InputSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA014722AFF6B0000D41806 /* InputSystem.m */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +28,10 @@
 		9F14C4612AEA4CE200161326 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9F14C4632AEA4CE200161326 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9F14C4652AEA4CE200161326 /* metal.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = metal.entitlements; sourceTree = "<group>"; };
+		9F43556D2BEE0266007310D8 /* Base.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Base.metal; sourceTree = "<group>"; };
+		9F4355702BEE0663007310D8 /* Renderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Renderer.h; sourceTree = "<group>"; };
+		9F4355712BEE0663007310D8 /* Renderer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Renderer.m; sourceTree = "<group>"; };
+		9F79DA042BEE14DF00BF4385 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		9FA014712AFF6B0000D41806 /* InputSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputSystem.h; sourceTree = "<group>"; };
 		9FA014722AFF6B0000D41806 /* InputSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputSystem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -59,6 +66,9 @@
 		9F14C4572AEA4CE000161326 /* metal */ = {
 			isa = PBXGroup;
 			children = (
+				9F79DA032BEE12A300BF4385 /* Assets */,
+				9F43556F2BEE05D3007310D8 /* Renderer */,
+				9F43556C2BEE0249007310D8 /* Shader */,
 				9FCCC6582BD6056A0030D066 /* Tools */,
 				9F14C4582AEA4CE000161326 /* AppDelegate.h */,
 				9F14C4592AEA4CE000161326 /* AppDelegate.m */,
@@ -70,6 +80,31 @@
 				9F14C4652AEA4CE200161326 /* metal.entitlements */,
 			);
 			path = metal;
+			sourceTree = "<group>";
+		};
+		9F43556C2BEE0249007310D8 /* Shader */ = {
+			isa = PBXGroup;
+			children = (
+				9F43556D2BEE0266007310D8 /* Base.metal */,
+			);
+			path = Shader;
+			sourceTree = "<group>";
+		};
+		9F43556F2BEE05D3007310D8 /* Renderer */ = {
+			isa = PBXGroup;
+			children = (
+				9F4355702BEE0663007310D8 /* Renderer.h */,
+				9F4355712BEE0663007310D8 /* Renderer.m */,
+			);
+			path = Renderer;
+			sourceTree = "<group>";
+		};
+		9F79DA032BEE12A300BF4385 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				9F79DA042BEE14DF00BF4385 /* background.png */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 		9FCCC6582BD6056A0030D066 /* Tools */ = {
@@ -139,6 +174,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F14C45F2AEA4CE200161326 /* Assets.xcassets in Resources */,
+				9F79DA052BEE14DF00BF4385 /* background.png in Resources */,
 				9F14C4622AEA4CE200161326 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -152,6 +188,8 @@
 			files = (
 				9FA014732AFF6B0000D41806 /* InputSystem.m in Sources */,
 				9F14C45D2AEA4CE000161326 /* ViewController.m in Sources */,
+				9F4355722BEE0663007310D8 /* Renderer.m in Sources */,
+				9F43556E2BEE0266007310D8 /* Base.metal in Sources */,
 				9F14C4642AEA4CE200161326 /* main.m in Sources */,
 				9F14C45A2AEA4CE000161326 /* AppDelegate.m in Sources */,
 			);
