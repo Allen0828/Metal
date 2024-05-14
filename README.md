@@ -19,11 +19,11 @@ Metal的重要性
 <img src="https://github.com/Allen0828/Metal/blob/main/images/metal-1.png" width="200" height="200"/>
 </p>
  
-## 2 MDLMesh、帧刷新、数据传入GPU
+## 2 GPU处理数据
 <p>
-<view><img src="https://github.com/Allen0828/Metal/blob/main/images/metal-2-1.png" width="100"></img><img
-src="https://github.com/Allen0828/Metal/blob/main/images/metal-2-2.png" width="100"></img> <img
-src="https://github.com/Allen0828/Metal/blob/main/images/metal-2-3.png" width="100"></img>
+<view><img src="https://github.com/Allen0828/Metal/blob/main/images/metal-2-1.png" width="200"></img><img
+src="https://github.com/Allen0828/Metal/blob/main/images/metal-2-2.png" width="200"></img> <img
+src="https://github.com/Allen0828/Metal/blob/main/images/metal-2-3.png" width="200"></img>
 </view>
 </p>
 
