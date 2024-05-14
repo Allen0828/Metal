@@ -12,6 +12,11 @@
 		9F14C45F2AEA4CE200161326 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F14C45E2AEA4CE200161326 /* Assets.xcassets */; };
 		9F14C4622AEA4CE200161326 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F14C4602AEA4CE200161326 /* Main.storyboard */; };
 		9F14C4642AEA4CE200161326 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F14C4632AEA4CE200161326 /* main.m */; };
+		9F9C7DB82BF35C430077F7FD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F14C4632AEA4CE200161326 /* main.m */; };
+		9F9C7DB92BF35DA20077F7FD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F14C4592AEA4CE000161326 /* AppDelegate.m */; };
+		9F9C7DBA2BF35DF90077F7FD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F14C45C2AEA4CE000161326 /* ViewController.m */; };
+		9F9C7DBB2BF35E9F0077F7FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F9C7D972BF357E90077F7FD /* LaunchScreen.storyboard */; };
+		9F9C7DBC2BF35EA10077F7FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F9C7D982BF357E90077F7FD /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,10 +29,21 @@
 		9F14C4612AEA4CE200161326 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9F14C4632AEA4CE200161326 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9F14C4652AEA4CE200161326 /* metal.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = metal.entitlements; sourceTree = "<group>"; };
+		9F9C7D8F2BF351F20077F7FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F9C7D972BF357E90077F7FD /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9F9C7D982BF357E90077F7FD /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		9F9C7D9F2BF358860077F7FD /* metal-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "metal-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		9F14C4522AEA4CE000161326 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F9C7D9C2BF358860077F7FD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -49,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				9F14C4552AEA4CE000161326 /* metal.app */,
+				9F9C7D9F2BF358860077F7FD /* metal-iOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,16 +73,35 @@
 		9F14C4572AEA4CE000161326 /* metal */ = {
 			isa = PBXGroup;
 			children = (
+				9F14C4632AEA4CE200161326 /* main.m */,
+				9F9C7D962BF3524A0077F7FD /* iOS */,
+				9F9C7D952BF352390077F7FD /* macOS */,
 				9F14C4582AEA4CE000161326 /* AppDelegate.h */,
 				9F14C4592AEA4CE000161326 /* AppDelegate.m */,
 				9F14C45B2AEA4CE000161326 /* ViewController.h */,
 				9F14C45C2AEA4CE000161326 /* ViewController.m */,
 				9F14C45E2AEA4CE200161326 /* Assets.xcassets */,
-				9F14C4602AEA4CE200161326 /* Main.storyboard */,
-				9F14C4632AEA4CE200161326 /* main.m */,
-				9F14C4652AEA4CE200161326 /* metal.entitlements */,
 			);
 			path = metal;
+			sourceTree = "<group>";
+		};
+		9F9C7D952BF352390077F7FD /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				9F14C4602AEA4CE200161326 /* Main.storyboard */,
+				9F14C4652AEA4CE200161326 /* metal.entitlements */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		9F9C7D962BF3524A0077F7FD /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				9F9C7D972BF357E90077F7FD /* LaunchScreen.storyboard */,
+				9F9C7D982BF357E90077F7FD /* Main.storyboard */,
+				9F9C7D8F2BF351F20077F7FD /* Info.plist */,
+			);
+			path = iOS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -88,6 +124,23 @@
 			productReference = 9F14C4552AEA4CE000161326 /* metal.app */;
 			productType = "com.apple.product-type.application";
 		};
+		9F9C7D9E2BF358860077F7FD /* metal-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F9C7DB52BF358870077F7FD /* Build configuration list for PBXNativeTarget "metal-iOS" */;
+			buildPhases = (
+				9F9C7D9B2BF358860077F7FD /* Sources */,
+				9F9C7D9C2BF358860077F7FD /* Frameworks */,
+				9F9C7D9D2BF358860077F7FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "metal-iOS";
+			productName = "metal-iOS";
+			productReference = 9F9C7D9F2BF358860077F7FD /* metal-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -99,6 +152,9 @@
 				TargetAttributes = {
 					9F14C4542AEA4CE000161326 = {
 						CreatedOnToolsVersion = 15.0;
+					};
+					9F9C7D9E2BF358860077F7FD = {
+						CreatedOnToolsVersion = 15.1;
 					};
 				};
 			};
@@ -116,6 +172,7 @@
 			projectRoot = "";
 			targets = (
 				9F14C4542AEA4CE000161326 /* metal */,
+				9F9C7D9E2BF358860077F7FD /* metal-iOS */,
 			);
 		};
 /* End PBXProject section */
@@ -130,6 +187,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9F9C7D9D2BF358860077F7FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F9C7DBB2BF35E9F0077F7FD /* LaunchScreen.storyboard in Resources */,
+				9F9C7DBC2BF35EA10077F7FD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -140,6 +206,16 @@
 				9F14C45D2AEA4CE000161326 /* ViewController.m in Sources */,
 				9F14C4642AEA4CE200161326 /* main.m in Sources */,
 				9F14C45A2AEA4CE000161326 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F9C7D9B2BF358860077F7FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F9C7DB82BF35C430077F7FD /* main.m in Sources */,
+				9F9C7DB92BF35DA20077F7FD /* AppDelegate.m in Sources */,
+				9F9C7DBA2BF35DF90077F7FD /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +285,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 13.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -264,6 +341,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 13.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -277,10 +355,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = metal/metal.entitlements;
+				CODE_SIGN_ENTITLEMENTS = metal/macOS/metal.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"TARGET_MACOS=1",
+					"$(inherited)",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
@@ -292,6 +374,8 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.allen0828.spm.metal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = macosx;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 			};
 			name = Debug;
@@ -301,10 +385,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = metal/metal.entitlements;
+				CODE_SIGN_ENTITLEMENTS = metal/macOS/metal.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				GCC_PREPROCESSOR_DEFINITIONS = "TARGET_MACOS=1";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
@@ -316,7 +401,73 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.allen0828.spm.metal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = macosx;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Release;
+		};
+		9F9C7DB62BF358870077F7FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D5M8CJ9NDR;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"TARGET_IOS=1",
+					"$(inherited)",
+				);
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = metal/iOS/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.metalPG.metal-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9F9C7DB72BF358870077F7FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D5M8CJ9NDR;
+				GCC_PREPROCESSOR_DEFINITIONS = "TARGET_IOS=1";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = metal/iOS/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.metalPG.metal-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -337,6 +488,15 @@
 			buildConfigurations = (
 				9F14C4692AEA4CE200161326 /* Debug */,
 				9F14C46A2AEA4CE200161326 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9F9C7DB52BF358870077F7FD /* Build configuration list for PBXNativeTarget "metal-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F9C7DB62BF358870077F7FD /* Debug */,
+				9F9C7DB72BF358870077F7FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
