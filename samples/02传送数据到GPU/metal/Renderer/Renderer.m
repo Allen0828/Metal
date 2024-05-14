@@ -2,10 +2,11 @@
 //  Renderer.m
 //  metal
 //
-//  Created by Allen on 2024/5/10.
+//  Created by Allen on 2024/5/14.
 //
 
 #import "Renderer.h"
+
 #import <MetalKit/MetalKit.h>
 
 typedef struct
@@ -69,7 +70,7 @@ static id<MTLDevice> m_device;
         bool test = false;
         [renderEncoder setFragmentBytes:&test length:sizeof(bool) atIndex:0];
         id<MTLTexture> bg = [self getBackgroundTexture];
-        //[renderEncoder setFragmentTexture:bg atIndex:2];
+        [renderEncoder setFragmentTexture:bg atIndex:2];
         
         static const uint index[] = {
             0, 1, 2, 2, 3, 0
@@ -96,7 +97,11 @@ static id<MTLDevice> m_device;
 }
 
 - (id<MTLTexture>)getBackgroundTexture {
-    NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"background" ofType:@"png"]];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"background" ofType:@"png"];
+    if (path == nil) {
+        return nil;
+    }
+    NSURL *url = [NSURL fileURLWithPath:path];
     NSError *error;
     MTKTextureLoader *textureLoader = [[MTKTextureLoader alloc] initWithDevice:m_device];
     id<MTLTexture> uv = [textureLoader newTextureWithContentsOfURL:url options:@{MTKTextureLoaderOptionOrigin: MTKTextureLoaderOriginBottomLeft, MTKTextureLoaderOptionSRGB: @false, MTKTextureLoaderOptionGenerateMipmaps: @true} error:&error];
@@ -130,3 +135,4 @@ static id<MTLDevice> m_device;
  }
 
  */
+
