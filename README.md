@@ -27,7 +27,7 @@ src="https://github.com/Allen0828/Metal/blob/main/images/metal-2-3.png" width="2
 </view>
 </p>
 
-## 3 3D模型和坐标矩阵
+## 3 三维空间
 <p>
 <view><img src="https://github.com/Allen0828/Metal/blob/main/images/metal-3-1.gif" width="200"></img><img
 src="https://github.com/Allen0828/Metal/blob/main/images/metal-3-2.png" width="200"></img>
