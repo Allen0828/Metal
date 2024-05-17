@@ -29,7 +29,9 @@ src="https://github.com/Allen0828/Metal/blob/main/images/metal-2-3.png" width="2
 
 ## 3 3D模型和坐标矩阵
 <p>
-<img src="https://github.com/Allen0828/Metal/blob/main/images/metal-3.png" width="200" height="200"/>
+<view><img src="https://github.com/Allen0828/Metal/blob/main/images/metal-3-1.gif" width="200"></img><img
+src="https://github.com/Allen0828/Metal/blob/main/images/metal-3-2.png" width="200"></img>
+</view>
 </p>
 
 ## 4 法线和深度
