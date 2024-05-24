@@ -112,27 +112,11 @@ static id<MTLDevice> m_device;
     return uv;
 }
 
+// 测试使用相机流
+// 请参考 https://github.com/Allen0828/ARKit 
 
 @end
 
 
-/*
- self.transformBuffer = [self.mtkView.device newBufferWithLength:sizeof(simd_float3x3) options:MTLResourceCPUCacheModeDefaultCache];
- memcpy([self.transformBuffer contents], &transform, sizeof(transform));
- [renderEncoder setVertexBuffer:self.transformBuffer offset:0 atIndex:1];
- 
- - (void)update {
-     InputSystem *input = [InputSystem shareInstance];
-     CGFloat zoom = (input->mouseScroll.x + input->mouseScroll.y) * 0.1;
-     transform.columns[0][0] += zoom;
-     transform.columns[1][1] += zoom;
-     input->mouseScroll = CGPointZero;
-     
-     if (!NSEqualPoints(input->mouseDelta, CGPointZero)) {
-         transform.columns[2][0] += (input->mouseDelta.x * 0.1);
-         input->mouseDelta = CGPointZero;
-     }
- }
 
- */
 
